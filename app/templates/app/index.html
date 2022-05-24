@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB-Search</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navabr__row">
+            <div class="navbar__element">
+                <p>DB-Search</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div id="form__wrapper">
+            <form id="form">
+                <div class="flex__wrapper">
+
+                    <div class="flex__block">
+                        <div class="flex__column">
+                            <div class="input__block">
+                                <p>Курс</p>
+                                <input id="course" size="50" class="form-control" type="number" min="1" max="6" name="course" placeholder="Курс">
+                            </div>
+                            <div class="input__block">
+                                <p>Кафедра</p>
+                                <input id="department" class="form-control" type="number" min="1" name="department" placeholder="Кафедра">
+                            </div>
+                            <div class="input__block">
+                                <p>Дисциплина</p>
+                                <input id="discipline" class="form-control" type="text" name="discipline" placeholder="Дисциплина">
+                            </div>
+                        </div>
+    
+                        <div class="flex__column">
+                            <div class="input__block">
+                                <p>Тип литературы</p>
+                                <input id="literature_type" class="form-control" type="text" name="literature-type" placeholder="Тип литературы">
+                            </div>
+                            <div class="input__block">
+                                <p>Преподаватель</p>
+                                <input id="teacher" class="form-control" type="text" name="teacher" placeholder="Преподаватель">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex__block">
+                        <div class="input__block submit">
+                            <input id="submit" class="btn" type="submit" value="Поиск">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div id="list-wrapper"></div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
